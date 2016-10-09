@@ -5,6 +5,7 @@
 To run the app, follow these steps.
 
 jspm install
+npm install
 typings install
 cd src/server && npm install
 gulp

@@ -13,8 +13,10 @@
     "express": "^4.14.0",
     "express-restify-mongoose": "^4.0.0",
     "jwt-simple": "^0.5.0",
+    "method-override": "^2.3.6",
     "moment": "^2.15.1",
     "mongoose": "^4.0.0",
-    "nodemon": "^1.10.2"
+    "nodemon": "^1.10.2",
+    "request": "^2.75.0"
   }
 }

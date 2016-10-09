@@ -18,7 +18,6 @@ System.config({
     "aurelia-animator-css": "npm:aurelia-animator-css@1.0.1",
     "aurelia-api": "npm:aurelia-api@3.0.0",
     "aurelia-auth": "npm:aurelia-auth@3.0.2",
-    "aurelia-authentication": "npm:aurelia-authentication@3.0.0",
     "aurelia-bootstrapper": "npm:aurelia-bootstrapper@1.0.0",
     "aurelia-event-aggregator": "npm:aurelia-event-aggregator@1.0.0",
     "aurelia-fetch-client": "npm:aurelia-fetch-client@1.0.1",
@@ -88,20 +87,6 @@ System.config({
       "aurelia-event-aggregator": "npm:aurelia-event-aggregator@1.0.0",
       "aurelia-fetch-client": "npm:aurelia-fetch-client@1.0.1",
       "aurelia-router": "npm:aurelia-router@1.0.5"
-    },
-    "npm:aurelia-authentication@3.0.0": {
-      "aurelia-api": "npm:aurelia-api@3.0.0",
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.1.0",
-      "aurelia-event-aggregator": "npm:aurelia-event-aggregator@1.0.0",
-      "aurelia-fetch-client": "npm:aurelia-fetch-client@1.0.1",
-      "aurelia-logging": "npm:aurelia-logging@1.0.0",
-      "aurelia-metadata": "npm:aurelia-metadata@1.0.1",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0",
-      "aurelia-path": "npm:aurelia-path@1.1.1",
-      "aurelia-router": "npm:aurelia-router@1.0.5",
-      "aurelia-templating-resources": "npm:aurelia-templating-resources@1.1.0",
-      "extend": "npm:extend@3.0.0",
-      "jwt-decode": "npm:jwt-decode@2.1.0"
     },
     "npm:aurelia-binding@1.0.7": {
       "aurelia-logging": "npm:aurelia-logging@1.0.0",
