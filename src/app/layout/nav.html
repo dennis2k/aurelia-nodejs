@@ -1,0 +1,41 @@
+<template>
+    <!-- Top navbar -->
+    <md-navbar md-fixed>
+        <a class="left ml" md-sidenav-collapse="ref.bind: navLeft;">
+            <i class="material-icons">menu</i>        
+        </a>
+        <a md-dropdown="activates: userDropdown" class="plr right" if.bind="user">
+            <img if.bind="user.picture" class="circle" src.bind="user.picture" style="margin-top: 10px" height="40px" width="40px" />
+            <i if.bind="!user.picture" class="material-icons">account_circle</i>
+        </a>
+        <ul class="hide-on-med-and-down right">
+            <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}" md-waves>
+                <a href.bind="row.href">${row.title}</a>
+            </li>
+        </ul>
+        
+    </md-navbar>
+    <!-- Profile dropdown content -->
+    <ul id="userDropdown" class="dropdown-content">
+        <li>
+            <a href.bind="'/profile'">
+                Profile
+            </a>
+        </li>
+        <li class="divider"></li>
+        <li click.delegate="logout()">
+            <a>
+                <i class="material-icons">exit_to_app</i>
+            </a>
+        </li>
+    </ul>
+    <!-- Left sidebar content -->
+    <md-sidenav view-model.ref="navLeft" md-close-on-click="true"> 
+        <ul>
+          <li md-waves><a>About</a></li>
+          <li md-waves><a>Installation</a></li>
+          <li md-waves><a>Project Status</a></li>
+          <li md-waves><a>Help/Docs</a></li>
+        </ul>
+      </md-sidenav>
+</template>

@@ -1,0 +1,38 @@
+<template>
+    <section class="au-animate">
+        <h1>Contract list</h1>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 card-container au-animate" repeat.for="contract of contracts">
+                <a click.delegate="loadSingle(contract)">
+                ${contract.name }
+                ${contract.address}
+                ${contract.city}
+                ${contract.zip}
+                </a>
+                ${contract.fullName}
+                <i class="material-icons" click.delegate="remove(contract)">close</i>
+
+            </div>
+        </div>
+        <div class="row">
+            <a route-href="route: contract-details; params.bind: { name: 'empty' }" class="btn btn-success">Add new</a>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="button-row">
+                    <md-input md-label="Address" md-value.bind="searchAddress"></md-input><br />
+                    <button md-button><i class="left material-icons" click.delegate="getByAddress(searchAddress)">mode_edit</i>I'm a basic button</button>
+                    <button md-button="flat: true;">I'm a flat button</button>
+                </div>
+                <div class="button-row">
+                    <button md-button="large: true;">I'm a large button</button>
+                    <button md-button="flat: true; large: true;">I'm a large flat button</button>
+                </div>
+                <div class="button-row">
+                    <button md-button="disabled: true;">I'm a basic disabled button</button>
+                    <button md-button="disabled: true; flat: true;">I'm a flat disabled button</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>

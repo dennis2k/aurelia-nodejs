@@ -1,0 +1,43 @@
+<template>
+  <div>
+    <md-input
+      md-label="Name"
+      md-placeholder="Name"
+      md-validate="true"
+      md-value.bind="user.displayName & validate:rules">
+    </md-input>
+
+    <md-input
+        md-type="email"
+        md-label="Email"
+        md-validate="true"
+        md-validate-success
+        md-value.bind="user.email & validate:rules">
+    </md-input> 
+
+    <md-input
+        md-type="password"
+        md-label="Password"
+        md-validate="true"
+        md-validate-success
+        md-value.bind="user.password & validate:rules">
+    </md-input>
+
+    <md-input
+        md-type="password"
+        md-label="Confirm password"
+        md-validate="true"
+        md-validate-success
+        md-value.bind="confirmPassword & validate:rules">
+    </md-input>
+  </div>
+
+  <div style="margin-top: 15px;">
+    <button 
+        md-button
+        disabled.bind="controller.errors.length"
+        click.delegate="signup()">
+        Signup
+    </button>
+  </div>
+</template>

@@ -1,0 +1,7 @@
+<template>
+    <md-input md-label="Name" md-value.bind="contract.name"></md-input><br />
+    <md-input md-label="Address" md-value.bind="contract.address"></md-input><br />
+    <md-input md-label="City" md-value.bind="contract.city"></md-input><br />
+    <md-input md-type="number" md-label="Zip" md-value.bind="contract.zip"></md-input><br />
+    <button md-button md-waves click.delegate="save(contract)">Create contract</button>
+</template>

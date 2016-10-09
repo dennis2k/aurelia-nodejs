@@ -1,0 +1,19 @@
+<template>
+    <div class="row">
+        <div class="col offset-s3 s6">
+            <md-input md-label="Email" md-value.bind="email"></md-input>
+            <md-input md-label="Password" md-value.bind="password"></md-input>
+        </div>
+        <div class="col offset-s3 s6">
+            <a class="left" route-href="route: signup;">Signup</a>                        
+            <button class="right" md-button md-waves click.delegate="login(email, password)">Login</button>            
+                        
+        </div>
+        <div class="col offset-s3 s6">
+            <button class="red darken-1" md-button md-waves style="width: 100%;" click.delegate="authenticate('google')">Login with Google</button>            
+        </div>
+        <div class="col offset-s3 s6">
+            <button class="blue darken-1" md-button md-waves style="width: 100%;" click.delegate="authenticate('facebook')">Login with Facebook</button>            
+        </div>
+    </div>
+</template>
