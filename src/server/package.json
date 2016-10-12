@@ -12,6 +12,7 @@
     "cors": "^2.8.1",
     "express": "^4.14.0",
     "express-restify-mongoose": "^4.0.0",
+    "gun": "^0.3.995",
     "jwt-simple": "^0.5.0",
     "method-override": "^2.3.6",
     "moment": "^2.15.1",

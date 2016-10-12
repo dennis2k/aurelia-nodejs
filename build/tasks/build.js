@@ -32,7 +32,7 @@ gulp.task('build-system', function() {
 
 // copies changed html files to the output directory
 gulp.task('build-html', function() {
-  return gulp.src(paths.html)
+  return gulp.src([paths.html, "!src/server/**/*.html"])
     .pipe(changed(paths.output, {extension: '.html'}))
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest(paths.output));

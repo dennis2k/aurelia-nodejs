@@ -1,0 +1,41 @@
+<template>
+    
+    
+    <md-input md-label="Name" md-value.bind="cat.name"></md-input>
+    <md-input md-label="Age" md-value.bind="cat.age"></md-input>
+    <button type="button" click.delegate="add(cat,tag)">Add</button>
+    <br />
+
+    <md-input md-type="number" md-label="Age" md-value.bind="filterAge"></md-input>
+    <button type="button" click.delegate="filterByAge(filterAge)">Filter</button>
+        
+    
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th></th>
+        </tr>
+
+        ${catService.collectionMap.length}
+        <tr repeat.for="[id, cat] of catService.collection">
+            <td>${cat.name}</td>
+            <td>${cat.age}</td>
+            <td>
+                <select md-select="label: Friend" change.delegate="setFriend(cat,cat.friend)" value.two-way="cat.friend">
+                    <option value="" disabled selected>select a friend</option>
+                    <option repeat.for="[id, friend] of allCats" model.bind="friend">${friend.name}</option>
+                </select>
+            </td>
+            <td>
+                <i class="material-icons" click.delegate="catService.remove(cat)">close</i>
+            </td>            
+            <td>
+                <i class="material-icons" click.delegate="update(cat)">menu</i>
+            </td>            
+            <td>
+                <i class="material-icons" click.delegate="printFriend(cat)">account</i>
+            </td>            
+        </tr>
+    </table>
+</template>

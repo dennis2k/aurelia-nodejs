@@ -11,3 +11,4 @@ coverage
 test/e2e/dist
 /typings
 /export
+data.json
