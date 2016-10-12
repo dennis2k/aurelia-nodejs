@@ -22,12 +22,6 @@
             <td>${cat.name}</td>
             <td>${cat.age}</td>
             <td>
-                <select md-select="label: Friend" change.delegate="setFriend(cat,cat.friend)" value.two-way="cat.friend">
-                    <option value="" disabled selected>select a friend</option>
-                    <option repeat.for="[id, friend] of allCats" model.bind="friend">${friend.name}</option>
-                </select>
-            </td>
-            <td>
                 <i class="material-icons" click.delegate="catService.remove(cat)">close</i>
             </td>            
             <td>

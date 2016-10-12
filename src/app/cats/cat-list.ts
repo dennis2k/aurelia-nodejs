@@ -6,11 +6,9 @@ import { GunFilterOperator } from '../resources/gun.service';
 @autoinject
 export class CatList {
     cat: CatModel;
-    allCats: Map<string, CatModel>;
 
     constructor(public catService: CatService) {
         this.cat = new CatModel();
-        this.allCats = this.catService.getAll();
     }
     add(cat: CatModel) {
         this.catService.save(cat);
